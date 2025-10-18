@@ -41,6 +41,10 @@ public class WeaponManager : MonoBehaviour {
     }
 
     void TurnOnSelectedWeapon(int weaponIndex) {
+
+        if (currentWeaponIndex == weaponIndex) {
+            return;
+        }
         //turn off current weapon
         weapons[currentWeaponIndex].gameObject.SetActive(false);
         //turn on selected weapon

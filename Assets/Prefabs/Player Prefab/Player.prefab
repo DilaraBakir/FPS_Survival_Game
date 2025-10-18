@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1758330994}
   - component: {fileID: 2785736717157163348}
   - component: {fileID: 7566259955977275404}
+  - component: {fileID: 6207181628308008560}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -111,6 +112,20 @@ MonoBehaviour:
   - {fileID: 1143671699}
   - {fileID: 1431569862}
   - {fileID: 258363504}
+--- !u!114 &6207181628308008560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517546948456405611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d942f5d1196c4ed4b921d7a3f2aa2a10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 15
+  damage: 20
 --- !u!1 &517546949189144381
 GameObject:
   m_ObjectHideFlags: 0
@@ -2845,6 +2860,10 @@ PrefabInstance:
     - target: {fileID: 100014, guid: ded3362b8b3b82243b3043bb355c770c, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: ded3362b8b3b82243b3043bb355c770c, type: 3}
+      propertyPath: m_TagString
+      value: Axe
       objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: ded3362b8b3b82243b3043bb355c770c, type: 3}
       propertyPath: m_Layer
