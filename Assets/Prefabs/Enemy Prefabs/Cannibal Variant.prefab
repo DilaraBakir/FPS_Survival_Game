@@ -1,5 +1,54 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &81362960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 81362962}
+  - component: {fileID: 81362961}
+  m_Layer: 0
+  m_Name: Attack Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &81362962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81362960}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.104, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3748413761302301516}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &81362961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81362960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6315fd07d5d5c944b918471a71eaf3a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  radius: 1
+  layermask:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!1001 &3748413761302172116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11,6 +60,14 @@ PrefabInstance:
     - target: {fileID: 100008, guid: 5eb4e4c4d0b3c8f4bb02a762ec01f6b4, type: 3}
       propertyPath: m_Name
       value: Cannibal
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 5eb4e4c4d0b3c8f4bb02a762ec01f6b4, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 5eb4e4c4d0b3c8f4bb02a762ec01f6b4, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 5eb4e4c4d0b3c8f4bb02a762ec01f6b4, type: 3}
       propertyPath: m_RootOrder
@@ -70,7 +127,10 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 66ca316ca6a17174d885e2dbf77a8fb4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 400024, guid: 5eb4e4c4d0b3c8f4bb02a762ec01f6b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 81362962}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100008, guid: 5eb4e4c4d0b3c8f4bb02a762ec01f6b4, type: 3}
       insertIndex: -1
@@ -196,3 +256,9 @@ MonoBehaviour:
   patrolRadiusMax: 60
   patrolForThisTime: 15
   waitBeforeAttack: 2
+  attackPoint: {fileID: 81362960}
+--- !u!4 &3748413761302301516 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400024, guid: 5eb4e4c4d0b3c8f4bb02a762ec01f6b4, type: 3}
+  m_PrefabInstance: {fileID: 3748413761302172116}
+  m_PrefabAsset: {fileID: 0}
