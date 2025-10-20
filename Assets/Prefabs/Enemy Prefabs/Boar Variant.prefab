@@ -65,6 +65,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: 62089467e5667ee4aaacef5070ce7f05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: 62089467e5667ee4aaacef5070ce7f05, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 62089467e5667ee4aaacef5070ce7f05, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90
@@ -115,11 +123,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: 62089467e5667ee4aaacef5070ce7f05, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.0049177906
+      value: -0.004917791
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: 62089467e5667ee4aaacef5070ce7f05, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.003033618
+      value: 0.0030336182
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: 62089467e5667ee4aaacef5070ce7f05, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -159,11 +167,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: 62089467e5667ee4aaacef5070ce7f05, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.02032816
+      value: 0.020328159
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: 62089467e5667ee4aaacef5070ce7f05, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.014885124
+      value: -0.014885122
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: 62089467e5667ee4aaacef5070ce7f05, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -179,11 +187,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: 62089467e5667ee4aaacef5070ce7f05, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0016663596
+      value: 0.0016663594
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: 62089467e5667ee4aaacef5070ce7f05, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.042147454
+      value: 0.04214745
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: 62089467e5667ee4aaacef5070ce7f05, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -207,11 +215,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: 62089467e5667ee4aaacef5070ce7f05, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: 62089467e5667ee4aaacef5070ce7f05, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 89.09
+      value: 113
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: 62089467e5667ee4aaacef5070ce7f05, type: 3}
       propertyPath: m_LocalRotation.w
@@ -512,6 +520,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100022, guid: 62089467e5667ee4aaacef5070ce7f05, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4492327191232396695}
+    - targetCorrespondingSourceObject: {fileID: 100022, guid: 62089467e5667ee4aaacef5070ce7f05, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2842218073457643963}
   m_SourcePrefab: {fileID: 100100000, guid: 62089467e5667ee4aaacef5070ce7f05, type: 3}
 --- !u!4 &7130094846222060460 stripped
 Transform:
@@ -600,3 +611,19 @@ MonoBehaviour:
   patrolForThisTime: 15
   waitBeforeAttack: 2
   attackPoint: {fileID: 4163933885218329041}
+--- !u!114 &2842218073457643963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7130094846222489506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 450082996159a634191d016a166f16d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  isPlayer: 0
+  isBoar: 1
+  isCannibal: 0

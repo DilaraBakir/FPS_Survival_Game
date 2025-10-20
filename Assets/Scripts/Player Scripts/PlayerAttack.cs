@@ -143,8 +143,10 @@ public class PlayerAttack : MonoBehaviour {
         RaycastHit hit;
 
         if (Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit)) {
-            print("We hit " + hit.transform.name);
-            //we check if we hit an enemy
+
+            if (hit.transform.tag == Tags.ENEMY_TAG) {
+                hit.transform.GetComponent<HealthScript>().ApplyDamage(damage);
+            }
 
         }
     }

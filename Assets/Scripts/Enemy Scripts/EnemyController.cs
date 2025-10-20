@@ -174,4 +174,8 @@ public class EnemyController : MonoBehaviour {
             attackPoint.SetActive(false);
         }
     }
+
+    public EnemyState EnemyState {
+        get; set;
+    }
 }
