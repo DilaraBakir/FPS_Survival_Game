@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -13,12 +14,15 @@ public class HealthScript : MonoBehaviour {
 
     private bool isDead;
 
+    private EnemyAudio enemyAudio;
+
     void Awake() {
         if (isBoar || isCannibal) {
             enemyAnimator = GetComponent<EnemyAnimator>();
             enemyController = GetComponent<EnemyController>();
             navMeshAgent = GetComponent<NavMeshAgent>();
             //get enemy audio
+            enemyAudio = GetComponentInChildren<EnemyAudio>();
         }
 
         if (isPlayer) {
@@ -60,6 +64,7 @@ public class HealthScript : MonoBehaviour {
             enemyAnimator.enabled = false;
 
             //start coroutine
+            StartCoroutine(DeadSound());
 
             //enemy manager spawn more enemies
         }
@@ -72,6 +77,7 @@ public class HealthScript : MonoBehaviour {
             enemyAnimator.Dead();
 
             // start coroutine
+            StartCoroutine(DeadSound());
 
             //enemy manager spawn more enemies
 
@@ -104,5 +110,10 @@ public class HealthScript : MonoBehaviour {
 
     void TurnOffGameObject() {
         gameObject.SetActive(false);
+    }
+
+    IEnumerator DeadSound() {
+        yield return new WaitForSeconds(0.3f);
+        enemyAudio.PlayDieSound();
     }
 }
