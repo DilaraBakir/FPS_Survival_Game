@@ -16,6 +16,8 @@ public class HealthScript : MonoBehaviour {
 
     private EnemyAudio enemyAudio;
 
+    private PlayerStats playerStats;
+
     void Awake() {
         if (isBoar || isCannibal) {
             enemyAnimator = GetComponent<EnemyAnimator>();
@@ -27,6 +29,7 @@ public class HealthScript : MonoBehaviour {
 
         if (isPlayer) {
             //get player audio
+            playerStats = GetComponent<PlayerStats>();
         }
     }
 
@@ -38,6 +41,7 @@ public class HealthScript : MonoBehaviour {
 
         if (isPlayer) {
             //display the health ui
+            playerStats.DisplayHealthStats(health);
         }
 
         if (isBoar || isCannibal) {
