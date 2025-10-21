@@ -71,6 +71,7 @@ public class HealthScript : MonoBehaviour {
             StartCoroutine(DeadSound());
 
             //enemy manager spawn more enemies
+            EnemyManager.instance.EnemyDied(true);
         }
 
         if (isBoar) {
@@ -84,6 +85,7 @@ public class HealthScript : MonoBehaviour {
             StartCoroutine(DeadSound());
 
             //enemy manager spawn more enemies
+            EnemyManager.instance.EnemyDied(false);
 
         }
 
@@ -94,6 +96,7 @@ public class HealthScript : MonoBehaviour {
             }
 
             //call enemy manager to stop spawning enemies
+            EnemyManager.instance.StopSpawning();
 
             GetComponent<PlayerMovement>().enabled = false;
             GetComponent<PlayerAttack>().enabled = false;

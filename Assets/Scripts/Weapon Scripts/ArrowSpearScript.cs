@@ -8,7 +8,7 @@ public class ArrowSpearScript : MonoBehaviour {
 
     public float deactivateTimer = 3f;
 
-    public float damage = 15f;
+    public float damage = 50f;
 
     void Awake() {
         myBody = GetComponent<Rigidbody>();
@@ -33,5 +33,9 @@ public class ArrowSpearScript : MonoBehaviour {
 
     void OnTriggerEnter(Collider target) {
         //after we touch an enemy we deactivate the arrow   
+        if (target.tag == Tags.ENEMY_TAG) {
+            target.GetComponent<HealthScript>().ApplyDamage(damage);
+            gameObject.SetActive(false);
+        }
     }
 }

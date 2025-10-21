@@ -141,4 +141,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   deactivateTimer: 3
-  damage: 15
+  damage: 50

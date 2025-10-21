@@ -55,9 +55,11 @@ public class PlayerSprintAndCrouch : MonoBehaviour {
     }
 
     void Sprint() {
+        bool isMoving = Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0;
+
         //if we have stamina we can sprint
         if (sprintValue > 0f) {
-            if (Input.GetKeyDown(KeyCode.LeftShift) && !isCrouching) {
+            if (Input.GetKeyDown(KeyCode.LeftShift) && !isCrouching && isMoving) {
                 playerMovement.speed = sprintSpeed;
 
                 playerFootsteps.stepDistance = sprintStepDistance;
@@ -74,7 +76,7 @@ public class PlayerSprintAndCrouch : MonoBehaviour {
             playerFootsteps.volumeMax = walkVolumeMax;
         }
 
-        if (Input.GetKey(KeyCode.LeftShift) && !isCrouching) {
+        if (Input.GetKey(KeyCode.LeftShift) && !isCrouching && isMoving) {
 
             sprintValue -= sprintTreshold * Time.deltaTime;
 
